@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneekQR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="qr_card">
+                <h3>Website name</h3>
+                <img class="spinner" src="/spinner.gif" alt="">
+                <div id="qr">
+                </div>
+                <div class="save_btn">
+                </div>
+            </div>
+        </div>
+
+        <div class="rigth_side">
+            <h1 class="app_name">SneekQR</h1>
+            
+            <form id="input_form">
+                <label for="">URL</label>
+                <input id="url_input" type="text" placeholder="www.example.com">
+
+                <label for="size">Size</label>
+                <select name="size" id="size_input">
+                    <option value="">Choose QR size</option>
+                    <option value="100">100 * 100</option>
+                    <option value="200">200 * 200</option>
+                    <option value="300">300 * 300</option>
+                </select>
+
+                <button type="submit" class="btn form_btn">Generate QR Code</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
