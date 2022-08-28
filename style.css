@@ -29,7 +29,22 @@ a{
 .left_side{
     position: relative;
     width: 40%;
-    background-color: aquamarine;
+    background:-moz-linear-gradient(45deg, rgba(0, 188, 212, 1) 30%, rgba(161, 130, 238, 1) 65%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(45deg, rgba(0, 188, 212, 1) 30%, rgba(161, 130, 238, 1) 65%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(45deg, rgba(0, 188, 212, 1) 30%, rgba(161, 130, 238, 1) 65%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A182EE', endColorstr='#00BCD4', GradientType=1 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(45deg, rgba(0, 188, 212, 1) 30%, rgba(161, 130, 238, 1) 65%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(45deg, rgba(0, 188, 212, 1) 30%, rgba(161, 130, 238, 1) 65%);
 }
 
 .rigth_side{
@@ -37,6 +52,10 @@ a{
     width: 60%;
     padding: 2em;
     text-align: center;
+}
+
+.app_name{
+    color: rgba(161, 130, 238, 1);
 }
 
 #input_form{
@@ -64,7 +83,7 @@ a{
 
 .form_btn{
     margin-top: 1em;
-    background-color: aquamarine;
+    background-color: rgba(0, 188, 212, 1);
 }
 
 .qr_card{
@@ -86,7 +105,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     width: 40%;
-    background-color: aquamarine;
+    background-color: rgba(0, 188, 212, 1);
 }
 
 #qr{
