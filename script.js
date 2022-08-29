@@ -4,8 +4,8 @@ const form = document.getElementById('input_form');
 function onSubmit(e){
     e.preventDefault();
 
-    const URl = document.getElementById('url_input').value;
-    const size = document.getElementById('size_input').value;
+    let URl = document.getElementById('url_input').value;
+    let size = document.getElementById('size_input').value;
 
     if(URl === ''){
         console.log('enter a url')
@@ -14,9 +14,10 @@ function onSubmit(e){
         showSpinner();
 
         setTimeout(() =>{
-            hideSpinner()
-            generateQR(URl,size)
-
+            hideSpinner();
+            generateQR(URl,size);
+            resetForm();
+            
             setTimeout(() => {
                 const saveUrl = document.querySelector('#qr img').src;
                 createSaveUrl(saveUrl);
@@ -24,6 +25,11 @@ function onSubmit(e){
         }, 1000)
     }
     
+}
+
+function resetForm(){
+    document.getElementById('url_input').value = '';
+    document.getElementById('size_input').value = '';
 }
 
 function generateQR(url, size){
